@@ -5,7 +5,7 @@ public class recipe {
     String ingredients;
     String directions;
 
-    //Empty Constructor
+    //Constructors
     recipe()
     {
         name = "";
@@ -13,7 +13,6 @@ public class recipe {
         directions = "";
     }
 
-    //Constructor
     recipe(String name, String ingredients, String directions)
     {
         this.name = name;
@@ -23,6 +22,6 @@ public class recipe {
 
     public void print()
     {
-        
+
     }
 }

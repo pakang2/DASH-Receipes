@@ -19,9 +19,13 @@ public class recipe {
         this.directions = directions;
     }
 
-    public void print()
+    public void printName()
     {
         System.out.println(name);
+    }
+
+    public void printInfo()
+    {
         System.out.println(ingredients);
         System.out.println(directions);
     }

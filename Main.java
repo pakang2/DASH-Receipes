@@ -33,19 +33,20 @@ public class Main {
         }
 
         // Recive input from user
-        System.out.println("Please type a number to select a recipe: ");
-        for (int i = 0; i < hashCount; i++) {
+        for (int i = 1; i < hashCount; i++) {
             recipe currRecipe = map.get(i);
             currRecipe.printName();
         }
+        System.out.println();
+        System.out.println("Please type a number to select one of the recipes: ");
 
         int inputFromUser = input.nextInt();
-        if (inputFromUser <= hashCount && inputFromUser > 0) {
+        if (inputFromUser < hashCount && inputFromUser > 0) {
             recipe requestedRecipe = map.get(inputFromUser);
             requestedRecipe.printName();
             requestedRecipe.printInfo();
         } else {
-            System.out.println("Please enter a number from 1 to " + hashCount);
+            System.out.println("Please enter a number from 1 to " + (hashCount - 1));
         }
         
         input.close();

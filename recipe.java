@@ -5,9 +5,8 @@ public class recipe {
     String ingredients;
     String directions;
 
-    //Constructors
-    recipe()
-    {
+    // Constructors
+    recipe() {
         name = "";
         ingredients = "";
         directions = "";
@@ -22,6 +21,8 @@ public class recipe {
 
     public void print()
     {
-
+        System.out.println(name);
+        System.out.println(ingredients);
+        System.out.println(directions);
     }
 }

@@ -22,11 +22,10 @@ public class Main {
                 String ingredients = sc.nextLine(); 
                 String directions = sc.nextLine();
                 recipe currRecipe = new recipe(name, ingredients, directions);
-                currRecipe.print();
                 map.put(hashcount, currRecipe);
                 hashcount++;
             }
-            
+            System.out.println(map.get(1));        
 
             sc.close();
         } catch (FileNotFoundException e) {

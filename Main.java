@@ -22,7 +22,7 @@ public class Main {
                 String ingredients = sc.nextLine(); 
                 String directions = sc.nextLine();
                 recipe currRecipe = new recipe(name, ingredients, directions);
-
+                currRecipe.print();
                 map.put(hashcount, currRecipe);
                 hashcount++;
             }
@@ -34,6 +34,7 @@ public class Main {
             e.printStackTrace();
         }
 
+        /*
         // Recive input from user
         System.out.println("Please type a number to select a recipe: ");
 
@@ -44,6 +45,8 @@ public class Main {
         } else {
             System.out.println("Please enter a number from 1 to " + hashcount);
         }
+        */
         
+        input.close();
     }
 }

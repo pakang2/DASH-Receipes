@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         HashMap<Integer, recipe> map = new HashMap<>();
-        int hashcount = 1;
+        int hashCount = 1;
 
         try{
             File file = new File("recipes.txt");
@@ -22,10 +22,9 @@ public class Main {
                 String ingredients = sc.nextLine(); 
                 String directions = sc.nextLine();
                 recipe currRecipe = new recipe(name, ingredients, directions);
-                map.put(hashcount, currRecipe);
-                hashcount++;
+                map.put(hashCount, currRecipe);
+                hashCount++;
             }
-            System.out.println(map.get(1));        
 
             sc.close();
         } catch (FileNotFoundException e) {
@@ -33,18 +32,21 @@ public class Main {
             e.printStackTrace();
         }
 
-        /*
         // Recive input from user
         System.out.println("Please type a number to select a recipe: ");
+        for (int i = 0; i < hashCount; i++) {
+            recipe currRecipe = map.get(i);
+            currRecipe.printName();
+        }
 
         int inputFromUser = input.nextInt();
-        if (inputFromUser <= hashcount && inputFromUser > 10) {
-            recipe currRecipe = map.get(inputFromUser);
-            currRecipe.print();
+        if (inputFromUser <= hashCount && inputFromUser > 0) {
+            recipe requestedRecipe = map.get(inputFromUser);
+            requestedRecipe.printName();
+            requestedRecipe.printInfo();
         } else {
-            System.out.println("Please enter a number from 1 to " + hashcount);
+            System.out.println("Please enter a number from 1 to " + hashCount);
         }
-        */
         
         input.close();
     }
